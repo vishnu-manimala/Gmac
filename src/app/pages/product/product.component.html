@@ -1,0 +1,85 @@
+<div class="container mt-5 ">
+    <div class="container d-flex flex-row  justify-content-between mb-5">
+        <div>
+            <span class=" h3 text-primary fw-bolder text-black-50 ">Product Id : </span>
+            <span class="h5  text-primary">1110 - 1101</span>
+        </div>
+        <div>
+            <button class="btn btn-primary text-white rounded-3  shadow ">Update Status</button>
+        </div>
+    </div>
+    <form [formGroup]="form">
+        <div class="row">
+          <div class="col-md-6 fw-bold">
+            <div class="form-group d-flex flex-row justify-content-between pb-2  ">
+              <label for="itemName" >ITEM NAME:</label>
+              <input type="text" class="form-control w-75 shadow-sm " id="itemName" formControlName="itemName" required>
+            </div>
+            <div class="form-group d-flex flex-row justify-content-between pb-2  ">
+                <label for="consumedItem" >Consumed ITEM:</label>
+                <input type="text" class="form-control w-75 shadow-sm " id="consumedItem" formControlName="consumedItem" required>
+              </div>
+          </div>
+      
+          <div class="col-md-6 ps-3 ">
+            <div class="form-group d-flex flex-row justify-content-between pb-2 ">
+                <label for="BOMItem">BOM Item:</label>
+                <input type="text" class="form-control  w-75 shadow-sm" id="BOMItem" formControlName="BOMItem" required>
+            </div>
+          </div>
+        </div>
+        <!-- <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button> -->
+      </form>
+      <div class="table-responsive p-3 mt-3 ">
+        <table class="table table-bordered ">
+            <thead class="table-info ">
+                <tr>
+                    <th scope="col">Item ID
+                    </th>
+                    <th scope="col">Description
+                    </th>
+                    <th scope="col">Unit</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Department
+                    </th>
+                    <th scope="col">User
+                    </th>
+                    <th scope="col">Remarks
+                    </th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <div class="container row d-flex flex-row  justify-content-between mt-2 mt-md-5   ">
+            <div class="col-12 col-md-6 d-flex flex-row justify-content-start  text-center align-items-center w-50  p-3  rounded ">
+             <h6 for="forwardTo" > Forward to :</h6>
+             <select class="form-select   bg-primary w-25 ms-2 text-white border-0 ">
+                <option value="">Department</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+              </select>
+            </div>
+            <div class=" col-12 col-md-6 d-flex flex-column align-items-end">
+                <div class="input-group ">
+                    <span class="input-group-text text-primary">Request material</span>
+                    <textarea class="form-control w-50" rows="1" cols="50" aria-label="With textarea"></textarea>
+                  </div>
+                <button class="btn btn-primary text-white mt-1">Request</button>
+            </div>
+        </div>
+    </div>
+</div>

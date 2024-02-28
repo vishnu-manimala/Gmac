@@ -1,0 +1,56 @@
+<!-- filter oprtion -->
+<div class="container mt-5 d-flex flex-row justify-content-between">
+  <div class="w-25 w-md-50"> </div>
+  <div class="d-flex flex-row w-75 w-md-50   justify-content-end">
+    <div class="d-flex flex-row justify-content-around   mr-2">
+      <h5 class="text-black-50 pt-1 me-1 ">Department</h5>
+      <select class="form-select bg-primary  ms-2 text-white p-1 ps-2 pe-2 border-0">
+        <option value="">All</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+      </select>
+    </div>
+    <div class="d-flex flex-row justify-content-around ms-2 ">
+      <h5 class="text-black-50 pt-1 ms-3">Status</h5>
+      <select class="form-select bg-primary  text-white p-1 ps-2 pe-2 ms-2 border-0">
+        <option value="">Ongoing</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+      </select>
+    </div>
+  </div>
+</div>
+<!-- use for loopfor iterating through data. it will be responsive as it uses grid after 3 box it will go next row -->
+<div class="container-fluid d-flex flex-column mt-2 p-5 ">
+  <div><h5 class="text-primary">1000 - 1011</h5></div>
+  <div class="row ">
+    <div class="col-12 col-md-6 col-lg-4" >
+      <div class="container card_class">
+        <div class="card p-3 ">
+          <div class="status d-flex flex-row justify-content-between mb-2">
+             <span class="timeline text-black-50">1000 -1011</span>
+             <button class="btn btn-success  text-white completed" >Completed</button>
+             <button class="btn btn-success  text-white completed" *ngIf="completed">Completed</button>
+             <button class="btn btn-warning  text-white completed" **ngIf="!completed">Completed</button>
+          </div>
+          <div class="description">
+              <h4>Description :</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing 
+              and typesetting industry. Lorem Ipsum has been 
+              the industry's standard dummy text ever since 
+              the 1500s, when an unknown printer took a 
+              galley of type and scrambled it to make a type 
+              specimen book.
+            </p>
+          </div>
+          <div class="department mb-2"> Department: Design</div>
+          <div class="timeline text-center">
+            <button class="btn btn-primary text-white w-100 ">Timeline</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

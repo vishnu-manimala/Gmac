@@ -1,0 +1,27 @@
+<div class="container ">
+    <div class="table-responsive p-3 ">
+        <table class="table bo">
+            <thead  >
+                <tr class="text-black-50">
+                    <th scope="col"></th>
+                    <th>Job Id</th>
+                    <th>Date</th>
+                    <th>Customer</th>
+                    <th>Contact</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of tableData">
+                    <th scope="row">1</th>
+                    <td>{{ data.jobId}}</td>
+                    <td>{{data.date}}</td>
+                    <td>{{data.customer}}</td>
+                    <td>{{data.contact}}</td>
+                    <td *ngIf="data.status === 'completed'">{{data.status}}</td>
+                    <td *ngIf="data.status === 'Ongoing'">{{data.status}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

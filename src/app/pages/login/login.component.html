@@ -1,0 +1,29 @@
+<section class=" ">
+  <div class="main-container container-fluid  ">
+    <div class="image-conatiner">
+      <img [src]="" alt="logo"> 
+    </div>
+    <div class="form-container">
+      <h1>Login</h1>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="input-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" formControlName="username"  required>
+          <div *ngIf="loginForm.controls['username'].invalid && (loginForm.controls['username'].touched )">
+            <p *ngIf="loginForm.controls['username'].errors?.required">Username is required.</p>
+            <p *ngIf="loginForm.controls['username'].errors?.minlength">Username must be at least 3 characters long.</p>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" formControlName="password" required>
+          <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].touched)">
+            <p *ngIf="loginForm.controls['password'].errors?.required">Password is required.</p>
+            <p *ngIf="loginForm.controls['password'].errors?.minlength">Password must be at least 8 characters long.</p>
+          </div>
+        </div>
+        <button type="submit" [disabled]="loginForm.invalid">Sign In</button>
+      </form>
+    </div>
+  </div>
+</section>
