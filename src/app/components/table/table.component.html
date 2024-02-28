@@ -3,23 +3,24 @@
         <table class="table bo">
             <thead  >
                 <tr class="text-black-50">
-                    <th scope="col"></th>
-                    <th>Job Id</th>
-                    <th>Date</th>
-                    <th>Customer</th>
-                    <th>Contact</th>
-                    <th>Status</th>
+                    <th scope="col" class="text-black-50"></th>
+                    <th class="text-black-50">Job Id</th>
+                    <th class="text-black-50">Date</th>
+                    <th class="text-black-50">Customer</th>
+                    <th class="text-black-50">Contact</th>
+                    <th class="text-black-50">Status</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let data of tableData">
+                <tr >
                     <th scope="row">1</th>
-                    <td>{{ data.jobId}}</td>
-                    <td>{{data.date}}</td>
-                    <td>{{data.customer}}</td>
-                    <td>{{data.contact}}</td>
-                    <td *ngIf="data.status === 'completed'">{{data.status}}</td>
-                    <td *ngIf="data.status === 'Ongoing'">{{data.status}}</td>
+                    <td>123456 </td>
+                    <td>2024/02/01</td>
+                    <td>Alice Johnson</td>
+                    <td>23456 78901</td>
+                    <td  >
+                        <button class="btn btn-success rounded-3  ">Completed</button></td>
+                    <!-- <td class="bg-warningrounded-3"><button class="btn btn-warning rounded-3  ">Ongoing</button></td> -->
                 </tr>
             </tbody>
         </table>
